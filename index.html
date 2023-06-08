@@ -7,6 +7,16 @@
 
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Custom style -->
+        <link rel="stylesheet" href="styles.css" />
         <title>Frontend Mentor | Results summary component</title>
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -22,43 +32,56 @@
     </head>
     <body>
         <div class="container">
-            <div class="left">  
-        
-                <p class="h-3 text-gray">Your Result</p>
+            <div class="left">
+                <p class="text-gray">Your Result</p>
                 <div class="circle">
-                    <p>76</p>
-                    <p>of 100 </p>
+                    <p class="text-2xl">76</p>
+                    <p class="text-sm">of 100</p>
                 </div>
-                <p class="h-3">Great</p>
-                <p class="text gray">You scored higher than 65% of the people who have taken these tests.</p>
-            </div>   
+                <p class="text-xl">Great</p>
+                <p class="text text-gray">
+                    You scored higher than 65% of the people who have taken these tests.
+                </p>
+            </div>
             <div class="right">
                 <p class="h3">Summary</p>
-                <ul class="list">   
-                    <li class="list-item">
+                <ul class="list">
+                    <li class="list-item red-item">
                         <!-- icon -->
-                        <p class="red">Reaction</p>
-                        <div class="percent">80 <span class="gray">/ 100</span></div>
+                        <div class="icon-container">
+                            <img src="./images/icon-reaction.svg" alt="Reaction" />
+                            <p class="">Reaction</p>
+                        </div>
+                        <div class="percent">80 <span class="text-gray">/ 100</span></div>
                     </li>
-                    <li class="list-item">
+                    <li class="list-item orange-item">
                         <!-- icon -->
-                        <p class="red">Memory</p>
-                        <div class="percent">92 <span class="gray">/ 100</span></div>
+                        <div class="icon-container">
+                            <img src="./images/icon-memory.svg" alt="Memory" />
+                            <p class="">Memory</p>
+                        </div>
+                        <div class="percent">92 <span class="text-gray">/ 100</span></div>
                     </li>
-                    <li class="list-item">
+                    <li class="list-item green-item">
                         <!-- icon -->
-                        <p class="red">Verbal</p>
-                        <div class="percent">61 <span class="gray">/ 100</span></div>
+                        <div class="icon-container">
+                            <img src="./images/icon-verbal.svg" alt="Verbal" />
+                            <p class="">Verbal</p>
+                        </div>
+                        <div class="percent">61 <span class="text-gray">/ 100</span></div>
                     </li>
-                    <li class="list-item">
+                    <li class="list-item blue-item">
                         <!-- icon -->
-                        <p class="red">Visual</p>
-                        <div class="percent">72 <span class="gray">/ 100</span></div>
+                        <div class="icon-container">
+                            <img src="./images/icon-visual.svg" alt="Visual" />
+                            <p class="">Visual</p>
+                        </div>
+                        <div class="percent">72 <span class="text-gray">/ 100</span></div>
                     </li>
+                </ul>
                 <button class="btn">Continue</button>
             </div>
         </div>
-         
 
         <div class="attribution">
             Challenge by

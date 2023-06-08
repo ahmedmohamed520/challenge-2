@@ -1,0 +1,259 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-red: hsl(0, 100%, 67%);
+    --clr-yellow: hsl(39, 100%, 56%);
+    --clr-green: hsl(166, 100%, 37%);
+    --clr-red-2: hsla(0, 100%, 67%, 0.05);
+    --clr-yellow-2: hsla(39, 100%, 56%, 0.05);
+    --clr-green-2: hsl(166, 100%, 37%, 0.05);
+    --clr-blue-1: hsl(221, 100%, 96%);
+    --clr-blue-2: hsl(241, 100%, 89%);
+    --clr-blue-3: hsl(224, 30%, 27%);
+    --clr-blue-4: hsl(234, 85%, 45%);
+    --clr-blue-4-1: hsl(234, 85%, 45%, 0.05);
+
+    --bg-blue-1: hsl(252, 100%, 67%);
+    --bg-blue-2: hsl(241, 81%, 54%);
+    --bg-blue-3: hsla(256, 72%, 46%, 1);
+    --bg-blue-4: hsla(241, 72%, 46%, 0);
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    font-size: 112.5%;
+}
+
+/* Start code */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+    width: 40vw;
+    margin: 10vh auto;
+    border-radius: 10px;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+.left {
+    background: var(--bg-blue-2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+.circle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 555554px;
+    width: 10vw;
+    height: 10vw;
+    background-image: linear-gradient(var(--bg-blue-3), var(--bg-blue-4));
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.text-gray {
+    color: var(--clr-blue-1);
+}
+.h3 {
+    font-weight: 700;
+}
+.text {
+    font-weight: 300;
+    font-size: 0.825rem;
+    color: var(--clr-blue-2);
+}
+.text-xl {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+.text-2xl {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.text-sm {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--clr-blue-2);
+}
+
+.right {
+    padding: 20px;
+    height: 100%;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.list-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+.icon-container {
+    display: flex;
+    gap: 10px;
+}
+.percent {
+    color: var(--clr-blue-3);
+    font-weight: 700;
+}
+.percent span {
+    color: var(--clr-blue-2);
+}
+.red-item {
+    color: var(--clr-red);
+    background-color: var(--clr-red-2);
+}
+.orange-item {
+    color: var(--clr-yellow);
+    background-color: var(--clr-yellow-2);
+}
+.green-item {
+    color: var(--clr-green);
+    background-color: var(--clr-green-2);
+}
+.blue-item {
+    color: var(--clr-blue-4);
+    background-color: var(--clr-blue-4-1);
+}
+.btn {
+    background-color: var(--clr-blue-3);
+    padding: 8px;
+    border-radius: 2222px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.btn:hover {
+    background-color: var(--bg-blue-2);
+}
+.btn:focus {
+    outline: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1170px) {
+    .container {
+        width: 60vw;
+    }
+}
+@media screen and (max-width: 900px) {
+    .container {
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    .container {
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding-bottom: 20px;
+    }
+    .left {
+        height: auto;
+        padding: 40px;
+        border-radius: 0 0 20px 20px;
+    }
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+    .btn {
+        padding: 12px;
+    }
+}
